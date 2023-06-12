@@ -125,7 +125,7 @@
           "type": "array",
           "items": {
             "type": "object",
-            "$ref": "#/definitions/pbItem"
+            "$ref": "#/definitions/pbOrderingItem"
           }
         },
         "customerId": {
@@ -152,7 +152,31 @@
         }
       }
     },
-    "pbItem": {
+    "pbOrder": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "customerId": {
+          "type": "string"
+        },
+        "paymentId": {
+          "type": "string"
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/pbOrderingItem"
+          }
+        },
+        "status": {
+          "type": "string"
+        }
+      }
+    },
+    "pbOrderingItem": {
       "type": "object",
       "properties": {
         "storeId": {
@@ -174,30 +198,6 @@
         "quantity": {
           "type": "integer",
           "format": "int32"
-        }
-      }
-    },
-    "pbOrder": {
-      "type": "object",
-      "properties": {
-        "id": {
-          "type": "string"
-        },
-        "customerId": {
-          "type": "string"
-        },
-        "paymentId": {
-          "type": "string"
-        },
-        "items": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "$ref": "#/definitions/pbItem"
-          }
-        },
-        "status": {
-          "type": "string"
         }
       }
     },

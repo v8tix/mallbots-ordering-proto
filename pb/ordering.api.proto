@@ -14,11 +14,11 @@ message Order {
   string id = 1;
   string customer_id = 2;
   string payment_id = 3;
-  repeated Item items = 4;
+  repeated OrderingItem items = 4;
   string status = 5;
 }
 
-message Item {
+message OrderingItem {
   string store_id = 1;
   string product_id = 2;
   string store_name = 3;
@@ -28,7 +28,7 @@ message Item {
 }
 
 message CreateOrderRequest {
-  repeated Item items = 1;
+  repeated OrderingItem items = 1;
   string customer_id = 2;
   string payment_id = 3;
 }
